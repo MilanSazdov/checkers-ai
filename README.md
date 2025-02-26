@@ -89,4 +89,50 @@ python checkers/board.py
 
 ---
 
+## 📖 How It Works  
+
+The **Checkers AI** game follows standard checkers rules, where players take turns moving pieces diagonally across the board. The AI calculates its best move using **Minimax with Alpha-Beta Pruning** and adjusts its **search depth dynamically** for performance optimization.  
+
+### 🎮 **Game Interface**  
+- The game starts with an **8×8 checkers board**, where black and red pieces are placed in their initial positions.  
+- The AI's **thinking depth** is displayed in the top-left corner of the screen.  
+- Pieces that **can be moved** are highlighted with a **yellow glowing effect**.  
+
+🖼 **Game Start:**  
+At the beginning of the game, the **depth is set to 3**, and all available pieces that can be moved are highlighted.  
+
+![Game Start](assets/slika1.png)  
+
+---
+
+### 🎯 **Selecting a Piece**  
+- When a player selects a piece, it **turns green** to indicate the selection.  
+- The possible **move positions** are displayed as **gray dots** on the board.  
+
+🖼 **Piece Selection Example:**  
+
+![Piece Selection](assets/slika2.png)  
+
+---
+
+### 🔥 **Multi-Jump Capture**  
+- If an opponent's piece can be captured, the game **forces a jump**.  
+- The game supports **multi-jump captures**, allowing a piece to continue jumping as long as legal moves exist.  
+
+🖼 **Multi-Jump in Action:**  
+
+![Multi-Jump Capture](assets/slika3.png)  
+
+---
+
+### 👑 **King Promotion**  
+- When a piece reaches the opponent's **back row**, it gets **promoted to a king**.  
+- Kings are visually distinct and can **move both forward and backward**.  
+
+🖼 **King Pieces:**  
+
+<p align="center">
+  <img src="assets/king.png" width="120">  
+  <img src="assets/king2.png" width="120">  
+</p>    
 
