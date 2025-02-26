@@ -23,3 +23,45 @@
 ---
 
 📖 **This project was developed as part of the "Algorithms and Data Structures" course (2023/2024).**  
+
+---
+
+## 📚 Table of Contents  
+- [🛠 Technologies & Specifications](#-technologies--specifications)  
+- [🔧 Installing and Running the Project](#-installing-and-running-the-project)  
+- [📖 How It Works](#-how-it-works)  
+- [⚠️ Potential Issues & Troubleshooting](#-potential-issues--troubleshooting)  
+- [📜 License](#-license)  
+- [📬 Contact](#-contact)
+
+---
+
+## 🛠 Technologies & Specifications  
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![Pygame](https://img.shields.io/badge/Pygame-2.0%2B-orange?logo=python)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20MacOS-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)
+
+### 📦 **Dependencies**  
+The project relies on the following libraries and technologies:  
+
+| Library      | Purpose |
+|-------------|---------|
+| `pygame`    | Used for rendering the game board and handling user interactions |
+| `queue`     | Utilized for internal AI processing and state management |
+| `time`      | Used for AI move timing and performance measurement |
+| `json`      | Handles game configuration and move storage |
+| `os`        | File system operations and handling saved games |
+
+### 📥 **Install Dependencies**  
+Before running the project, install the required dependencies using:  
+
+```sh
+pip install pygame
+```
+
+---
+
+
