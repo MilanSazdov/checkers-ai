@@ -233,21 +233,25 @@ This significantly improves performance, especially in **longer games**.
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
+## 📜 License  
+This project is licensed under the [MIT License](LICENSE.md).  
+See the LICENSE file for more details.  
 
 ---
 
-## 📬 Contact
+## 🔗 Useful Links  
 
-If you have any questions, feel free to contact me:
+- 📖 [README](README.md)  
+- ❤️ [Code of Conduct](CODE_OF_CONDUCT.md)  
+- 📜 [MIT License](LICENSE.md)  
 
-- 📧 **Email:** [your-email@example.com](mailto:your-email@example.com)
-- 🐙 **GitHub:** [MilanSazdov](https://github.com/MilanSazdov)
-- 
-Feel free to **open an issue** on GitHub if you encounter any problems! 🚀
+---
+
+## 📬 Contact  
+📧 **Email:** [milansazdov@gmail.com](mailto:milansazdov@gmail.com)  
+🐙 **GitHub:** [MilanSazdov](https://github.com/MilanSazdov)  
+
+---
 
 
 
