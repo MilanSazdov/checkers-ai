@@ -64,4 +64,29 @@ pip install pygame
 
 ---
 
+## 🔧 Installing and Running the Project  
+
+### 📥 **1️⃣ Clone the Repository**  
+First, download the project by cloning the repository:  
+
+```sh
+git clone https://github.com/MilanSazdov/checkers-ai.git
+cd checkers-ai
+```
+### 📦 **2️⃣ Install Dependencies**  
+Ensure you have all required dependencies installed:  
+
+```sh
+pip install pygame
+```
+
+### ▶️ **3️⃣ Run the Game**  
+To start the checkers game, simply run the **board.py** script located inside the **checkers** folder:  
+
+```sh
+python checkers/board.py
+```
+
+---
+
 
