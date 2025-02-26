@@ -101,7 +101,7 @@ The **Checkers AI** game follows standard checkers rules, where players take tur
 🖼 **Game Start:**  
 At the beginning of the game, the **depth is set to 3**, and all available pieces that can be moved are highlighted.  
 
-![Game Start](assets/slika1.png)  
+![Game Start](assets/start_screen.png)  
 
 ---
 
@@ -111,7 +111,7 @@ At the beginning of the game, the **depth is set to 3**, and all available piece
 
 🖼 **Piece Selection Example:**  
 
-![Piece Selection](assets/slika2.png)  
+![Piece Selection](assets/selecting_figure.png)  
 
 ---
 
@@ -121,7 +121,7 @@ At the beginning of the game, the **depth is set to 3**, and all available piece
 
 🖼 **Multi-Jump in Action:**  
 
-![Multi-Jump Capture](assets/slika3.png)  
+![Multi-Jump Capture](assets/multi_jump.png)  
 
 ---
 
