@@ -185,9 +185,11 @@ Since checking all possible moves until the end of the game is computationally e
 ✔️ **Multiple Captures**: Moves leading to multiple jumps are highly favored.  
 
 📌 **Final evaluation formula**:
-\[
-\text{Score} = 1.3(\text{safe pieces}) + 3.3(\text{safe kings}) + 1.15(\text{movable pieces}) + 3.15(\text{movable kings}) - 1.5(\text{loner pieces}) - 3.5(\text{loner kings}) + 1.35(\text{defensive pieces}) + 3.35(\text{defensive kings}) + 27.5(\text{captured pieces}) + 33.5(\text{captured kings}) + 1.25(\text{center-controlled pieces}) + 3.25(\text{center-controlled kings}) 
-\]
+
+$$
+\text{Score} = 1.3(\text{safe pieces}) + 3.3(\text{safe kings}) + 1.15(\text{movable pieces}) + 3.15(\text{movable kings}) - 1.5(\text{loner pieces}) - 3.5(\text{loner kings}) + 1.35(\text{defensive pieces}) + 3.35(\text{defensive kings}) + 27.5(\text{captured pieces}) + 33.5(\text{captured kings}) + 1.25(\text{center-controlled pieces}) + 3.25(\text{center-controlled kings})
+$$
+
 
 🔢 **The AI aims to maximize this score for itself and minimize it for the opponent.**  
 
