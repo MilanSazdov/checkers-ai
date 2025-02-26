@@ -30,7 +30,7 @@
 - [🛠 Technologies & Specifications](#-technologies--specifications)  
 - [🔧 Installing and Running the Project](#-installing-and-running-the-project)  
 - [📖 How It Works](#-how-it-works)  
-- [⚠️ Potential Issues & Troubleshooting](#-potential-issues--troubleshooting)  
+- [🤖 Game AI](#-game-ai)  
 - [📜 License](#-license)  
 - [📬 Contact](#-contact)
 
@@ -135,4 +135,101 @@ At the beginning of the game, the **depth is set to 3**, and all available piece
   <img src="assets/king.png" width="120">  
   <img src="assets/king2.png" width="120">  
 </p>    
+
+---
+
+## 🤖 Game AI
+
+The AI in this checkers game is built using **Minimax algorithm** with **Alpha-Beta pruning** for optimizing decision-making. Additionally, the engine supports **variable search depth**, **heuristic evaluation**, and a **hash map for board state caching** to improve performance.
+
+---
+
+### 🔍 **Minimax Algorithm**
+The **Minimax** algorithm is used for making optimal decisions in a **two-player turn-based game**. The idea is to build a **game tree**, where each node represents a possible **board state**. The AI then evaluates these states recursively and picks the best possible move.
+
+- The **Maximizing player** (AI) tries to **maximize** the score.
+- The **Minimizing player** (human) tries to **minimize** the AI’s score.
+- The algorithm explores all possible moves, evaluates them, and chooses the best one.
+
+#### 🧩 **Algorithm Workflow:**
+1. Generate all possible moves for the AI.
+2. Simulate each move and generate a **game tree** up to a predefined **depth**.
+3. Evaluate board positions using a **heuristic function**.
+4. Use **Alpha-Beta pruning** to eliminate unnecessary computations.
+5. Return the **best move** based on the computed scores.
+
+---
+
+### ⚡ **Alpha-Beta Pruning**
+Since **Minimax** searches an exponential number of board states, we use **Alpha-Beta Pruning** to **skip** unpromising branches of the tree. This improves efficiency by eliminating unnecessary calculations.
+
+- **Alpha (α)**: The **best score** that the maximizing player can guarantee.
+- **Beta (β)**: The **best score** that the minimizing player can guarantee.
+- If at any node, the **Maximizing Player** finds a move that is **better than Beta**, further evaluation stops.
+- If at any node, the **Minimizing Player** finds a move that is **worse than Alpha**, further evaluation stops.
+
+🚀 **This results in a significant speedup of the Minimax algorithm!**
+
+---
+
+### 📊 **Heuristic Evaluation Function**
+Since checking all possible moves until the end of the game is computationally expensive, the AI evaluates board positions **before reaching the final state**. The **evaluation function** assigns a **numerical score** to each board state.
+
+#### 🎯 **Factors Considered in the Evaluation Function:**
+✔️ **Material Advantage**: Counts the number of normal pieces and kings.  
+✔️ **Mobility**: Prioritizes positions where more pieces have possible moves.  
+✔️ **Safety**: Figures that cannot be captured are favored.  
+✔️ **Center Control**: Figures in the center of the board are prioritized.  
+✔️ **Defense Strategy**: Figures in the last two rows are valued higher.  
+✔️ **Promotion Potential**: More empty squares on the opponent’s promotion row increases the score.  
+✔️ **Multiple Captures**: Moves leading to multiple jumps are highly favored.  
+
+📌 **Final evaluation formula**:
+\[
+\text{Score} = 1.3(\text{safe pieces}) + 3.3(\text{safe kings}) + 1.15(\text{movable pieces}) + 3.15(\text{movable kings}) - 1.5(\text{loner pieces}) - 3.5(\text{loner kings}) + 1.35(\text{defensive pieces}) + 3.35(\text{defensive kings}) + 27.5(\text{captured pieces}) + 33.5(\text{captured kings}) + 1.25(\text{center-controlled pieces}) + 3.25(\text{center-controlled kings}) 
+\]
+
+🔢 **The AI aims to maximize this score for itself and minimize it for the opponent.**  
+
+---
+
+### 🔄 **Variable Search Depth**
+The AI dynamically adjusts the **search depth** based on the game state:
+
+- **Many pieces on the board** → Lower depth (faster decision-making)
+- **Few pieces remaining** → Higher depth (more precise evaluation)
+- **Multiple jumps available** → Increases depth for better decision-making
+
+| Board State | Search Depth |
+|------------|-------------|
+| 🟢 More than 30 possible moves | 3 |
+| 🔵 15-30 possible moves | 4 |
+| 🔴 Less than 8 possible moves | 5 |
+| 🏆 Multiple capture moves available | 5 |
+
+This ensures that the AI plays efficiently in **early game**, but becomes **highly precise in endgame** situations.
+
+---
+
+### 🔥 **Hash Map Optimization**
+Since some board states **repeat multiple times**, recalculating Minimax for the same state is wasteful. To **speed up** the AI, we use a **Hash Map** that stores previously evaluated board states.
+
+✔️ **Key Idea**: Each board state is converted into a **unique string key** (e.g., `"wwbbbwwwbwwbww"`).  
+✔️ If a state **has already been evaluated**, its best move is **instantly retrieved** from the hash map instead of recalculating Minimax.  
+✔️ The evaluations are **stored in `evaluations.txt`** and updated dynamically.  
+
+This significantly improves performance, especially in **longer games**.
+
+---
+
+### 🕹️ **Example of AI Decision-Making**
+1️⃣ **AI generates possible moves** → **Filters out bad moves**  
+2️⃣ **Evaluates board states** using the **heuristic function**  
+3️⃣ **Prunes unpromising branches** with **Alpha-Beta pruning**  
+4️⃣ **Selects the best move** and executes it  
+5️⃣ **Stores the move in Hash Map** for faster decision-making in future turns  
+
+🚀 **This results in an AI that plays efficiently, adapts to different game states, and continuously improves its decision-making!**  
+
+---
 
