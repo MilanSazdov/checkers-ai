@@ -233,3 +233,21 @@ This significantly improves performance, especially in **longer games**.
 
 ---
 
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+
+---
+
+## 📬 Contact
+
+If you have any questions, feel free to contact me:
+
+- 📧 **Email:** [your-email@example.com](mailto:your-email@example.com)
+- 🐙 **GitHub:** [MilanSazdov](https://github.com/MilanSazdov)
+- 
+Feel free to **open an issue** on GitHub if you encounter any problems! 🚀
+
+
+
